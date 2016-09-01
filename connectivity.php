@@ -1,13 +1,34 @@
-<?php define('DB_HOST', 'localhost');
-define('DB_NAME', 'practice');
-define('DB_USER','root');
+<?php
+
+$hostname = "mysql.example.com"; // the hostname you created when creating the database
+$username = "yourusername";      // the username specified when setting up the database
+$password = "yourpassword";      // the password specified when setting up the database
+$database = "databasename";      // the database name chosen when setting up the database 
+
+$link = mysqli_connect($hostname, $username, $password, $database);
+if (mysqli_connect_errno()) {
+   die("Connect failed: %s\n" + mysqli_connect_error());
+   exit();
+}
+
+
+
+define('DB_HOST', '');
+define('DB_NAME', '');
+define('DB_USER','');
 define('DB_PASSWORD','');
-$con=mysql_connect() or die("Failed to connect to MySQL: " . mysql_error());
+$con=mysql_connect(logintest.pouncingfoxdev.website,pistonlegs,Paintball944) or die("It didn't work 1: " . mysql_error());
 $db=mysql_select_db(pouncingfoxdevlogintest,$con) or die("Failed to connect to MySQL: " . mysql_error());
-/*
+
 $ID = $_POST['user'];
 $Password = $_POST['pass'];
-*/
+
+
+
+
+
+
+
 function SignIn()
 {
 	session_start(); //starting the session for user profile page
